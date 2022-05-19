@@ -1,10 +1,11 @@
 name: CI
 
-on:   
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    # Publish tags as releases.
-    tags:
-      - '*'
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 env:
   IMAGE_NAME: todo

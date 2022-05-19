@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-app
+spec:
+  selector:
+    matchLabels:
+      app: todo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: todo
+    spec:
+      containers:
+        - image: ghcr.io/com-nimeji/todo:latest
+          name: todo-app
+          ports:
+            - containerPort: 8080
+              name: todo-app

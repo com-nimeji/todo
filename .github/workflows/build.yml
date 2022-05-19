@@ -16,15 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Java
-        uses: actions/setup-java@v2
-        with:
-          distribution: temurin
-          java-version: 17 
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
-      - name: Execute Gradle build
-        run: ./gradlew build
+      - name: Build Gradle Project
+        uses: com-nimeji/gradle-build@main
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Login to ghcr.io

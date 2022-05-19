@@ -38,4 +38,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: nimeji/todo:latest
+          tags: ghcr.io/todo:latest

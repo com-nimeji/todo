@@ -18,6 +18,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Build Gradle Project
         uses: com-nimeji/gradle-build@main
+        with:
+          java-version: 17
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Login to ghcr.io

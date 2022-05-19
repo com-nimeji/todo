@@ -20,6 +20,7 @@ jobs:
         uses: com-nimeji/gradle-build@main
         with:
           java-version: 17
+          shell: bash
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Login to ghcr.io
